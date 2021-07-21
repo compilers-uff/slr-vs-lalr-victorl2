@@ -1,3 +1,7 @@
+**Aluno:** Victor Ferreira Teixeira da Silva
+
+**Matricula:** 114031056
+
 # SLR vs LALR
 
 Trabalho da disciplina Compiladores 2021.1
