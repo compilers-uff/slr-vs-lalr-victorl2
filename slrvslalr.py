@@ -47,7 +47,9 @@ def p_simple_transform(p):
 def p_error(p):
     print(f"Erro de sintaxe: {p.value!r}")
 
+# gerando parsers SLR e LALR e salvando saidas na pasta outputs
 if __name__ == '__main__':
+    # gerando parsers SLR e LALR
     yacc(method='SLR', debugfile='slr_parser.out', tabmodule='slr_parsetab')
     yacc(method='LALR', debugfile='lalr_parser.out', tabmodule='lalr_parsetab')
 
