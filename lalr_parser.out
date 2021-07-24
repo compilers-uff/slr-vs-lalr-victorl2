@@ -6,15 +6,15 @@ Rule 0     S' -> S
 Rule 1     S -> L EQ R
 Rule 2     S -> R
 Rule 3     L -> MULT R
-Rule 4     L -> ID
+Rule 4     L -> id
 Rule 5     R -> L
 
 Terminals, with rules where they appear
 
 EQ                   : 1
-ID                   : 4
 MULT                 : 3
 error                : 
+id                   : 4
 
 Nonterminals, with rules where they appear
 
@@ -30,11 +30,11 @@ state 0
     (1) S -> . L EQ R
     (2) S -> . R
     (3) L -> . MULT R
-    (4) L -> . ID
+    (4) L -> . id
     (5) R -> . L
 
     MULT            shift and go to state 4
-    ID              shift and go to state 5
+    id              shift and go to state 5
 
     S                              shift and go to state 1
     L                              shift and go to state 2
@@ -67,20 +67,20 @@ state 4
     (3) L -> MULT . R
     (5) R -> . L
     (3) L -> . MULT R
-    (4) L -> . ID
+    (4) L -> . id
 
     MULT            shift and go to state 4
-    ID              shift and go to state 5
+    id              shift and go to state 5
 
     R                              shift and go to state 7
     L                              shift and go to state 8
 
 state 5
 
-    (4) L -> ID .
+    (4) L -> id .
 
-    EQ              reduce using rule 4 (L -> ID .)
-    $end            reduce using rule 4 (L -> ID .)
+    EQ              reduce using rule 4 (L -> id .)
+    $end            reduce using rule 4 (L -> id .)
 
 
 state 6
@@ -88,10 +88,10 @@ state 6
     (1) S -> L EQ . R
     (5) R -> . L
     (3) L -> . MULT R
-    (4) L -> . ID
+    (4) L -> . id
 
     MULT            shift and go to state 4
-    ID              shift and go to state 5
+    id              shift and go to state 5
 
     L                              shift and go to state 8
     R                              shift and go to state 9

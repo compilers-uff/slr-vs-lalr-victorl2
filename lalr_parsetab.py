@@ -6,9 +6,9 @@ _tabversion = '3.10'
 
 _lr_method = 'LALR'
 
-_lr_signature = 'EQ ID MULT\n    S : L EQ R\n    \n    S : R\n    \n    L : MULT R\n    \n    L : ID\n    \n    R : L\n    '
+_lr_signature = 'EQ MULT id\n    S : L EQ R\n    \n    S : R\n    \n    L : MULT R\n    \n    L : id\n    \n    R : L\n    '
     
-_lr_action_items = {'MULT':([0,4,6,],[4,4,4,]),'ID':([0,4,6,],[5,5,5,]),'$end':([1,2,3,5,7,8,9,],[0,-5,-2,-4,-3,-5,-1,]),'EQ':([2,5,7,8,],[6,-4,-3,-5,]),}
+_lr_action_items = {'MULT':([0,4,6,],[4,4,4,]),'id':([0,4,6,],[5,5,5,]),'$end':([1,2,3,5,7,8,9,],[0,-5,-2,-4,-3,-5,-1,]),'EQ':([2,5,7,8,],[6,-4,-3,-5,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -27,9 +27,9 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> S","S'",1,None,None,None),
-  ('S -> L EQ R','S',3,'p_expression_L_EQ_R','slrvslalr.py',19),
-  ('S -> R','S',1,'p_expression_R','slrvslalr.py',24),
-  ('L -> MULT R','L',2,'p_L_MULT_R','slrvslalr.py',29),
-  ('L -> ID','L',1,'p_L_ID','slrvslalr.py',34),
-  ('R -> L','R',1,'p_R_L','slrvslalr.py',39),
+  ('S -> L EQ R','S',3,'p_equality','slrvslalr.py',16),
+  ('S -> R','S',1,'p_initial_simple_transform','slrvslalr.py',22),
+  ('L -> MULT R','L',2,'p_multiplication','slrvslalr.py',28),
+  ('L -> id','L',1,'p_define_id','slrvslalr.py',34),
+  ('R -> L','R',1,'p_simple_transform','slrvslalr.py',40),
 ]
