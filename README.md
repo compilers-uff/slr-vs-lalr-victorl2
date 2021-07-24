@@ -1,7 +1,5 @@
 **Aluno:** Victor Ferreira Teixeira da Silva
-
 **Matricula:** 114031056
-
 # SLR vs LALR
 
 Trabalho da disciplina Compiladores 2021.1
@@ -34,5 +32,3 @@ uma implementação em Python da ferramenta Yacc.
      1. estar corretamente identificado com seu nome e data, 
      2. descrever o problema, e
      3. mostrar como este problema fica reportado pela ferramenta PLY.
-
-
