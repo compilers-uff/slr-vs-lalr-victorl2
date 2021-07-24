@@ -27,9 +27,9 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> S","S'",1,None,None,None),
-  ('S -> L EQ R','S',3,'p_equality','slrvslalr.py',16),
-  ('S -> R','S',1,'p_initial_simple_transform','slrvslalr.py',22),
-  ('L -> MULT R','L',2,'p_multiplication','slrvslalr.py',28),
-  ('L -> id','L',1,'p_define_id','slrvslalr.py',34),
-  ('R -> L','R',1,'p_simple_transform','slrvslalr.py',40),
+  ('S -> L EQ R','S',3,'p_equality','slrvslalr.py',19),
+  ('S -> R','S',1,'p_initial_simple_transform','slrvslalr.py',25),
+  ('L -> MULT R','L',2,'p_multiplication','slrvslalr.py',31),
+  ('L -> id','L',1,'p_define_id','slrvslalr.py',37),
+  ('R -> L','R',1,'p_simple_transform','slrvslalr.py',43),
 ]

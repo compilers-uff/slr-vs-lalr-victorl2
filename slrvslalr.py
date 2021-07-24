@@ -1,5 +1,8 @@
+import os
+import shutil
 from ply.lex import lex
 from ply.yacc import yacc
+
 
 tokens = ('id', 'MULT', 'EQ')
 
@@ -47,3 +50,14 @@ def p_error(p):
 if __name__ == '__main__':
     yacc(method='SLR', debugfile='slr_parser.out', tabmodule='slr_parsetab')
     yacc(method='LALR', debugfile='lalr_parser.out', tabmodule='lalr_parsetab')
+
+    # criando pasta de outputs
+    output_folder = "outputs"
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    # movendo os arquivos gerados para pasta outputs
+    output_files = ["slr_parser.out", "lalr_parser.out", "slr_parsetab.py","lalr_parsetab.py"]
+    for file in output_files:
+        shutil.move(file, f"{output_folder}/{file}")
+ 
